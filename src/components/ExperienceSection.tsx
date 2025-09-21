@@ -74,29 +74,30 @@ export function ExperienceSection() {
   const mlRef = useScrollCipherAnimation('ML & AI', { delay: 300, duration: 400 });
 
   return (
-    <section id="experience" className="py-20 px-8 bg-black relative">
-      {/* Background Image */}
-      <div className="absolute inset-0 opacity-15">
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
-        <img 
-          src="https://images.unsplash.com/photo-1718220216044-006f43e3a9b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB0ZWNoJTIwd29ya3NwYWNlfGVufDF8fHx8MTc1ODI5MTczMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Technology Background"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
+    <>
       {/* Screenshot Image Section */}
-      <div className=" absolute top-0 mt-20 pt-20 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-12 z-40">
+      <div className="relative h-96 bg-gradient-to-b from-transparent to-black/80 mb-8">
         <div className="absolute inset-0 flex items-center justify-center">
           <img 
-            src="/src/assets/Screenshot 2025-09-21 121203.png"
+            src="/src/assets/10.jpg"
             alt="Experience Screenshot"
-            className="h-32 w-auto object-contain opacity-60 hover:opacity-70 transition-opacity duration-300"
+            className="h-80 w-full object-contain opacity-40 hover:opacity-70 transition-opacity duration-300"
           />
         </div>
       </div>
 
-      <div className="mt-20 relative z-20 max-w-6xl mx-auto">
+      <section id="experience" className="py-20 mt-20 px-8 bg-black relative">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
+          <img 
+            src="/src/assets/2.jpg"
+            alt="Technology Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="relative z-20 max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -257,6 +258,7 @@ export function ExperienceSection() {
           </div>
         </motion.div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

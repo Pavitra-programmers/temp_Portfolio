@@ -8,7 +8,7 @@ const projects = [
     title: 'Customer Churn Prediction',
     category: 'MACHINE LEARNING',
     description: 'Leveraged predictive modeling to identify potential customer churn using advanced ML algorithms. Deployed using Flask backend with Scikit-learn for model serving.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc1ODE4NjE5M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: 'src/assets/6.webp',
     technologies: ['Python', 'Scikit-learn', 'Flask', 'Data Analysis'],
     link: 'https://costumer-churn-prediction-rq8j.onrender.com/',
     github: 'https://github.com/Pavitra-programmers/Costumer-Churn-Prediction'
@@ -17,7 +17,7 @@ const projects = [
     title: 'Campus Vehicle Access Management System',
     category: 'COMPUTER VISION',
     description: 'Automated system designed to detect vehicle number plates and manage entry/exit of vehicles on college campus. Utilizes advanced image recognition and machine learning technologies.',
-    image: 'https://images.unsplash.com/photo-1649829726631-fcd218631ab5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxyb2JvdGljcyUyMGF1dG9tYXRpb258ZW58MXx8fHwxNzU4MjY0NzI0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: 'src/assets/7.webp',
     technologies: ['Python', 'OpenCV', 'Machine Learning', 'Computer Vision'],
     link: 'https://github.com/Pavitra-programmers/Campus-Vehicle-Access-Management-System-CVAMS',
     github: 'https://github.com/Pavitra-programmers/Campus-Vehicle-Access-Management-System-CVAMS'
@@ -26,7 +26,7 @@ const projects = [
     title: 'Tic-Tac-AI',
     category: 'AI GAME DEVELOPMENT',
     description: 'AI-powered Tic-Tac-Toe game with unbeatable strategy implementation. Utilized Flask for backend logic and advanced game theory algorithms.',
-    image: 'https://images.unsplash.com/photo-1718011087751-e82f1792aa32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBhbGdvcml0aG1zfGVufDF8fHx8MTc1ODI5MTczNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: 'src/assets/8.webp',
     technologies: ['Python', 'Flask', 'AI Algorithms', 'Game Theory'],
     link: 'https://costumer-churn-prediction-rq8j.onrender.com/',
     github: 'https://github.com/Pavitra-programmers/TIC-TAC-TOE-AI'
@@ -35,7 +35,7 @@ const projects = [
     title: 'Quantum Encryption using WatsonX AI',
     category: 'QUANTUM COMPUTING',
     description: 'Advanced quantum encryption system leveraging IBM WatsonX AI capabilities. Implements quantum key distribution and cryptographic protocols for enhanced security.',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdWFudHVtJTIwY29tcHV0aW5nfGVufDF8fHx8MTc1ODI5MTc0MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: 'src/assets/1.avif',
     technologies: ['Python', 'Quantum Computing', 'IBM WatsonX', 'Cryptography'],
     link: 'https://github.com/Pavitra-programmers/Quantum-Encryption-using-WatsonXAi',
     github: 'https://github.com/Pavitra-programmers/Quantum-Encryption-using-WatsonXAi'
@@ -52,19 +52,22 @@ export function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="py-20 mb-20 px-8 bg-black relative">
+    <div>
       {/* Screenshot Image Section */}
-      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-20 z-40">
+      <div className="relative h-96 bg-gradient-to-b from-transparent to-black/80 mb-8">
         <div className="absolute inset-0 flex items-center justify-center">
           <img 
-            src="/src/assets/Screenshot 2025-09-21 121236.png"
+            src="/src/assets/9.jpg"
             alt="Projects Screenshot"
-            className="h-32 w-auto object-contain opacity-60 hover:opacity-70 transition-opacity duration-300"
+            className="h-80 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity duration-300"
           />
         </div>
       </div>
+
+      <section id="projects" className="py-20 mt-20 mb-20 px-8 bg-black relative">
+        <div className="relative mb-20 z-20 max-w-6xl mx-auto">
       
-      <div className="relative mt-20 pt-20 z-20 max-w-6xl mx-auto">
+      
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +104,7 @@ export function ProjectsSection() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
                   onError={(e) => {
                     e.currentTarget.src = 'https://via.placeholder.com/400x225/1a1a1a/ffffff?text=Project+Image';
                   }}
@@ -182,6 +185,7 @@ export function ProjectsSection() {
           ))}
         </div>
       </div>
-    </section>
+      </section>
+    </div>
   );
 }

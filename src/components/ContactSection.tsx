@@ -35,12 +35,12 @@ export function ContactSection() {
 
   return (
     <>
-      <section id="contact" className="py-20 px-8 bg-black relative">
+      <section id="contact" className="py-20 mt-20 px-8 bg-black relative">
         {/* Background Image - Behind everything */}
-        <div className="absolute inset-0 opacity-20 z-5">
+        <div className="absolute inset-0 opacity-40 z-5">
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1718011087751-e82f1792aa32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBhbGdvcml0aG1zfGVufDF8fHx8MTc1ODI5MTczNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src="/src/assets/3.jpg"
             alt="Neural Network Background"
             className="w-full h-full object-cover"
           />
@@ -50,9 +50,9 @@ export function ContactSection() {
         <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-12 z-40">
           <div className="absolute inset-0 flex items-center justify-center">
             <img 
-              src="/src/assets/www.spektralstudio.com_.png"
+              src="/src/assets/12.jpg"
               alt="Spektral Studio"
-              className="h-32 w-auto object-contain opacity-90 hover:opacity-95 transition-opacity duration-300"
+              className="h-32 w-auto object-contain opacity-50 hover:opacity-95 transition-opacity duration-300"
             />
           </div>
         </div>
@@ -196,9 +196,9 @@ export function ContactSection() {
       <div className="space-y-8 bottom-0">
         <div>
           <img 
-            src="/src/assets/Screenshot 2025-09-21 121355.png"
+            src="/src/assets/11.jpg"
             alt="Experience Screenshot"
-            className="h-32 w-auto object-contain opacity-60 hover:opacity-70 transition-opacity duration-300"
+            className="h-32 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity duration-300"
           />
         </div>
       </div>

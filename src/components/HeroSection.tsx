@@ -11,24 +11,13 @@ export function HeroSection() {
   return (
     <section className="min-h-screen flex items-center px-8 bg-black relative overflow-hidden">
       {/* Background Video/Image Placeholder */}
-      <div className="absolute inset-0 opacity-40">
+      <div className="absolute inset-0 opacity-42">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black z-10" />
         <img 
-          src="https://images.unsplash.com/photo-1718220216044-006f43e3a9b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB0ZWNoJTIwd29ya3NwYWNlfGVufDF8fHx8MTc1ODI5MTczMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src="/src/assets/4.jpg"
           alt="Professional Tech Workspace"
           className="w-full h-full object-cover"
         />
-      </div>
-
-      {/* Hero Image Section */}
-      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-12 z-40">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <img 
-            src="/src/assets/IMG-20250328-WA0014.jpg"
-            alt="Hero Screenshot"
-            className="w-full h-full object-cover opacity-60 hover:opacity-70 transition-opacity duration-300"
-          />
-        </div>
       </div>
 
       <div className="relative z-20 max-w-6xl mx-auto">

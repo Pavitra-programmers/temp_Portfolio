@@ -17,7 +17,7 @@ const services = [
       content: 'Full-stack backend systems from API design to database optimization and cloud deployment.',
       additional: 'Built for scale. Optimized for performance. Deployed with confidence.'
     },
-    image: 'https://images.unsplash.com/photo-1529126894674-8dd7cb884766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbG91ZCUyMGNvbXB1dGluZyUyMGF3c3xlbnwxfHx8fDE3NTgyMTc2NjR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: '/src/assets/1.avif'
   },
   {
     title: 'MACHINE LEARNING',
@@ -33,7 +33,7 @@ const services = [
       content: 'From concept to production, ML models that solve real-world problems with measurable impact.',
       additional: 'Data-driven insights. Intelligent automation. Future-ready solutions.'
     },
-    image: 'https://images.unsplash.com/photo-1718011087751-e82f1792aa32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBhbGdvcml0aG1zfGVufDF8fHx8MTc1ODI5MTczNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: '/src/assets/5.png'
   },
   {
     title: 'CLOUD & DEVOPS',
@@ -49,7 +49,7 @@ const services = [
       content: 'Cloud-native solutions with automated deployment pipelines and scalable infrastructure.',
       additional: 'Zero-downtime deployments. Automated scaling. Production-ready systems.'
     },
-    image: 'https://images.unsplash.com/photo-1691435828932-911a7801adfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwbmV0d29ya3xlbnwxfHx8fDE3NTgyOTE3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    image: '/src/assets/1.avif'
   }
 ];
 
@@ -109,7 +109,7 @@ export function ServicesSection() {
                   className="mt-12"
                 >
                   <button className="text-white text-sm font-mono tracking-widest hover:opacity-60 transition-opacity duration-300">
-                    VIEW PROJECTS &gt;
+                    
                   </button>
                 </motion.div>
               )}

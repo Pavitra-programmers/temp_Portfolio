@@ -32,7 +32,7 @@ export default function App() {
           <HeroSection />
           {/* <ProfileSection /> */}
           <ServicesSection />
-          <ProjectsSection />
+          <ProjectsSection  />
           <ExperienceSection />
           <ContactSection />
         </main>
