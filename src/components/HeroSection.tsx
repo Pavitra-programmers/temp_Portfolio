@@ -1,6 +1,13 @@
+import React from 'react';
 import { motion } from 'motion/react';
+import { useCipherAnimation } from '../hooks/useCipherAnimation';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export function HeroSection() {
+  const nameRef = useCipherAnimation('KRITENSH KUMAR', { delay: 500, duration: 800 });
+  const titleRef = useCipherAnimation('Backend Developer, ML Engineer & DevOps', { delay: 800, duration: 800 });
+  const specializationRef = useCipherAnimation('BACKEND SYSTEMS, MACHINE LEARNING & DEVOPS', { delay: 1100, duration: 800 });
+
   return (
     <section className="min-h-screen flex items-center px-8 bg-black relative overflow-hidden">
       {/* Background Video/Image Placeholder */}
@@ -13,6 +20,17 @@ export function HeroSection() {
         />
       </div>
 
+      {/* Hero Image Section */}
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-12 z-40">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src="/src/assets/IMG-20250328-WA0014.jpg"
+            alt="Hero Screenshot"
+            className="w-full h-full object-cover opacity-60 hover:opacity-70 transition-opacity duration-300"
+          />
+        </div>
+      </div>
+
       <div className="relative z-20 max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Main Headline */}
@@ -21,16 +39,22 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
           >
-            <h1 className="text-6xl md:text-7xl lg:text-8xl text-white leading-none tracking-tight font-mono mb-8">
-              KRITENSH
-              <br />
-              KUMAR
-            </h1>
-            <div className="border-l-2 border-gray-500 pl-6 mt-8">
-              <h2 className="text-xl md:text-2xl text-gray-300 font-mono tracking-wide">
-                Backend Developer & ML Engineer
+            <div className="mb-8">
+              <h1 ref={nameRef} className="text-6xl md:text-7xl lg:text-8xl text-white leading-none tracking-tight font-mono">
+                KRITENSH
+                <br />
+                KUMAR
+              </h1>
+              <div className="flex items-center mt-6">
+                <span className="text-white text-2xl font-mono mr-4">+</span>
+                <div className="flex-1 h-px bg-white"></div>
+              </div>
+              <h2 ref={titleRef} className="text-xl md:text-2xl text-white font-mono tracking-wide mt-4 uppercase">
+                Backend Developer, ML Engineer & DevOps
               </h2>
-              <p className="text-sm text-gray-400 font-mono mt-2">
+            </div>
+            <div className="border-l-2 border-gray-500 pl-6 mt-8">
+              <p className="text-sm text-gray-400 font-mono">
                 Central University of Jammu • B.Tech CSE
               </p>
             </div>
@@ -48,15 +72,16 @@ export function HeroSection() {
                 <h3 className="text-sm text-white tracking-widest font-mono mb-2 uppercase">
                   SPECIALIZATION
                 </h3>
-                <h4 className="text-sm text-white tracking-widest font-mono mb-3 uppercase">
-                  BACKEND SYSTEMS & MACHINE LEARNING
+                <h4 ref={specializationRef} className="text-sm text-white tracking-widest font-mono mb-3 uppercase">
+                  BACKEND SYSTEMS, MACHINE LEARNING & DEVOPS
                 </h4>
               </div>
               
               <p className="text-xs text-gray-400 leading-relaxed font-mono max-w-sm">
                 Developing scalable backend architectures, 
-                ETL pipelines, and intelligent systems using 
-                Python, AWS, and modern ML frameworks.
+                ETL pipelines, intelligent systems, and cloud 
+                infrastructure using Python, AWS, Docker, 
+                Kubernetes, and modern ML frameworks.
               </p>
               
               <div className="pt-4">

@@ -1,4 +1,6 @@
+import React from 'react';
 import { motion } from 'motion/react';
+import { useScrollCipherAnimation } from '../hooks/useScrollCipherAnimation';
 
 const services = [
   {
@@ -52,9 +54,13 @@ const services = [
 ];
 
 export function ServicesSection() {
+  const backendRef = useScrollCipherAnimation('BACKEND DEVELOPMENT', { delay: 200, duration: 600 });
+  const mlRef = useScrollCipherAnimation('MACHINE LEARNING', { delay: 200, duration: 600 });
+  const cloudRef = useScrollCipherAnimation('CLOUD & DEVOPS', { delay: 200, duration: 600 });
+
   return (
-    <section className="py-20 px-8 bg-black">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-8 bg-black relative">
+      <div className="relative z-20 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={service.title}
@@ -77,7 +83,12 @@ export function ServicesSection() {
 
             {/* Left Column - Service Title and Categories */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl text-white leading-tight font-mono mb-8 tracking-tight">
+              <h2 
+                ref={service.title === 'BACKEND DEVELOPMENT' ? backendRef : 
+                     service.title === 'MACHINE LEARNING' ? mlRef :
+                     service.title === 'CLOUD & DEVOPS' ? cloudRef : null}
+                className="text-3xl md:text-4xl text-white leading-tight font-mono mb-8 tracking-tight"
+              >
                 {service.title}
               </h2>
               

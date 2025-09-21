@@ -1349,3 +1349,30 @@ html {
   inherits: false;
   initial-value: 1;
 }
+
+/* Custom door animations */
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 1.5s ease-in-out forwards;
+}
+
+.animate-slide-down {
+  animation: slide-down 1.5s ease-in-out forwards;
+}

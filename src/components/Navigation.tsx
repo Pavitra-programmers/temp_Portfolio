@@ -9,6 +9,10 @@ export function Navigation() {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToExperience = () => {
+    document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <motion.nav
       initial={{ opacity: 0 }}
@@ -33,7 +37,13 @@ export function Navigation() {
             onClick={scrollToProjects}
             className="text-white text-sm tracking-widest font-mono hover:opacity-60 transition-opacity duration-300"
           >
-            WORK
+            PROJECTS
+          </motion.button>
+          <motion.button
+            onClick={scrollToExperience}
+            className="text-white text-sm tracking-widest font-mono hover:opacity-60 transition-opacity duration-300"
+          >
+            EXPERIENCE
           </motion.button>
           <motion.button
             onClick={scrollToContact}

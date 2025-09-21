@@ -1,38 +1,42 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Mail, Github, Linkedin, Phone } from 'lucide-react';
+import { useScrollCipherAnimation } from '../hooks/useScrollCipherAnimation';
 
 export function ContactSection() {
+  const titleRef = useScrollCipherAnimation('LET\'S BUILD SOMETHING', { delay: 200, duration: 500 });
+  
   const contactMethods = [
     {
       icon: Mail,
       label: 'EMAIL',
-      value: 'krkkumar302@gmail.com',
-      href: 'mailto:krkkumar302@gmail.com'
+      value: 'kritenshstp021@gmail.com',
+      href: 'mailto:kritenshstp021@gmail.com'
     },
     {
       icon: Phone,
       label: 'PHONE',
-      value: '+91 9702805999',
-      href: 'tel:+919702805999'
+      value: '+91 9103258699',
+      href: 'tel:+919103258699'
     },
     {
       icon: Github,
       label: 'GITHUB',
-      value: 'github.com/kritensh',
-      href: 'https://github.com/kritensh'
+      value: 'github.com/Pavitra-programmers',
+      href: 'https://github.com/Pavitra-programmers'
     },
     {
       icon: Linkedin,
       label: 'LINKEDIN',
-      value: 'linkedin.com/in/kritensh',
-      href: 'https://linkedin.com/in/kritensh'
+      value: 'linkedin.com/in/kritensh-kumar-79819b2a7',
+      href: 'https://www.linkedin.com/in/kritensh-kumar-79819b2a7/'
     }
   ];
 
   return (
     <section id="contact" className="py-20 px-8 bg-black relative">
-      {/* Background Image */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Background Image - Behind everything */}
+      <div className="absolute inset-0 opacity-20 z-5">
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
         <img 
           src="https://images.unsplash.com/photo-1718011087751-e82f1792aa32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBhbGdvcml0aG1zfGVufDF8fHx8MTc1ODI5MTczNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
@@ -41,7 +45,18 @@ export function ContactSection() {
         />
       </div>
 
-      <div className="relative z-20 max-w-6xl mx-auto">
+      {/* Spektral Image Section - Above background */}
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-12 z-40">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src="/src/assets/www.spektralstudio.com_.png"
+            alt="Spektral Studio"
+            className="h-32 w-auto object-contain opacity-90 hover:opacity-95 transition-opacity duration-300"
+          />
+        </div>
+      </div>
+
+      <div className="mt-20 relative z-20 max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -51,11 +66,20 @@ export function ContactSection() {
           className="grid lg:grid-cols-2 gap-16 mb-16"
         >
           <div>
-            <h2 className="text-3xl md:text-4xl text-white leading-tight font-mono mb-8 tracking-tight">
-              LET'S BUILD
-              <br />
-              SOMETHING
-            </h2>
+            <div className="mb-8">
+              <h2 ref={titleRef} className="text-3xl md:text-4xl text-white leading-tight font-mono tracking-tight">
+                LET'S BUILD
+                <br />
+                SOMETHING
+              </h2>
+              <div className="flex items-center mt-4">
+                <span className="text-white text-lg font-mono mr-3">+</span>
+                <div className="flex-1 h-px bg-white"></div>
+              </div>
+              <p className="text-sm text-white font-mono tracking-wide mt-3 uppercase">
+                Ready to innovate together
+              </p>
+            </div>
             <button className="text-white text-sm font-mono tracking-widest hover:opacity-60 transition-opacity duration-300">
               GET IN TOUCH &gt;
             </button>
@@ -132,7 +156,7 @@ export function ContactSection() {
             meaningful conversations.
           </p>
           <a 
-            href="mailto:krkkumar302@gmail.com"
+            href="mailto:kritenshstp021@gmail.com"
             className="inline-block text-white text-sm font-mono tracking-widest border border-gray-600 px-8 py-3 hover:bg-white hover:text-black transition-all duration-300"
           >
             START A CONVERSATION
@@ -165,6 +189,18 @@ export function ContactSection() {
             </div>
           </div>
         </motion.div>
+      </div>
+
+      {/* Screenshot Images Below Footer */}
+      <div className="space-y-8">
+        {/* Experience Screenshot */}
+        <div className="flex justify-center">
+          <img 
+            src="/src/assets/Screenshot 2025-09-21 121355.png"
+            alt="Experience Screenshot"
+            className="h-32 w-auto object-contain opacity-60 hover:opacity-70 transition-opacity duration-300"
+          />
+        </div>
       </div>
     </section>
   );

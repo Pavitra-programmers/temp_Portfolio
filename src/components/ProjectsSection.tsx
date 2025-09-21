@@ -1,6 +1,7 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, Github } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { useScrollCipherAnimation } from '../hooks/useScrollCipherAnimation';
 
 const projects = [
   {
@@ -9,17 +10,17 @@ const projects = [
     description: 'Leveraged predictive modeling to identify potential customer churn using advanced ML algorithms. Deployed using Flask backend with Scikit-learn for model serving.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc1ODE4NjE5M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     technologies: ['Python', 'Scikit-learn', 'Flask', 'Data Analysis'],
-    link: '#',
-    github: '#'
+    link: 'https://costumer-churn-prediction-rq8j.onrender.com/',
+    github: 'https://github.com/Pavitra-programmers/Costumer-Churn-Prediction'
   },
   {
-    title: 'Alphabot2 Robot',
-    category: 'ROBOTICS & AI',
-    description: 'Autonomous robot performing various tasks without human intervention. Integrated sensors, cameras, and ML modules for advanced computational capabilities.',
+    title: 'Campus Vehicle Access Management System',
+    category: 'COMPUTER VISION',
+    description: 'Automated system designed to detect vehicle number plates and manage entry/exit of vehicles on college campus. Utilizes advanced image recognition and machine learning technologies.',
     image: 'https://images.unsplash.com/photo-1649829726631-fcd218631ab5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxyb2JvdGljcyUyMGF1dG9tYXRpb258ZW58MXx8fHwxNzU4MjY0NzI0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    technologies: ['Python', 'Raspberry Pi', 'OpenCV', 'IoT Sensors'],
-    link: '#',
-    github: '#'
+    technologies: ['Python', 'OpenCV', 'Machine Learning', 'Computer Vision'],
+    link: 'https://github.com/Pavitra-programmers/Campus-Vehicle-Access-Management-System-CVAMS',
+    github: 'https://github.com/Pavitra-programmers/Campus-Vehicle-Access-Management-System-CVAMS'
   },
   {
     title: 'Tic-Tac-AI',
@@ -27,24 +28,43 @@ const projects = [
     description: 'AI-powered Tic-Tac-Toe game with unbeatable strategy implementation. Utilized Flask for backend logic and advanced game theory algorithms.',
     image: 'https://images.unsplash.com/photo-1718011087751-e82f1792aa32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBhbGdvcml0aG1zfGVufDF8fHx8MTc1ODI5MTczNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     technologies: ['Python', 'Flask', 'AI Algorithms', 'Game Theory'],
-    link: '#',
-    github: '#'
+    link: 'https://costumer-churn-prediction-rq8j.onrender.com/',
+    github: 'https://github.com/Pavitra-programmers/TIC-TAC-TOE-AI'
   },
   {
-    title: 'DRDO AI Agents',
-    category: 'DEFENSE TECHNOLOGY',
-    description: 'AI-powered agents for threat detection and analysis. Mentored 15+ weekly threat indicators relevant to national security using ML and web technologies.',
-    image: 'https://images.unsplash.com/photo-1691435828932-911a7801adfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxjeWJlcnNlY3VyaXR5JTIwbmV0d29ya3xlbnwxfHx8fDE3NTgyOTE3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    technologies: ['Machine Learning', 'Python', 'Security Analytics', 'Web Technologies'],
-    link: '#',
-    github: '#'
-  }
+    title: 'Quantum Encryption using WatsonX AI',
+    category: 'QUANTUM COMPUTING',
+    description: 'Advanced quantum encryption system leveraging IBM WatsonX AI capabilities. Implements quantum key distribution and cryptographic protocols for enhanced security.',
+    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdWFudHVtJTIwY29tcHV0aW5nfGVufDF8fHx8MTc1ODI5MTc0MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    technologies: ['Python', 'Quantum Computing', 'IBM WatsonX', 'Cryptography'],
+    link: 'https://github.com/Pavitra-programmers/Quantum-Encryption-using-WatsonXAi',
+    github: 'https://github.com/Pavitra-programmers/Quantum-Encryption-using-WatsonXAi'
+  },
 ];
 
 export function ProjectsSection() {
+  const titleRef = useScrollCipherAnimation('SELECTED PROJECTS', { delay: 200, duration: 500 });
+
+  const handleLinkClick = (url: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="projects" className="py-20 px-8 bg-black relative">
-      <div className="max-w-6xl mx-auto">
+      {/* Screenshot Image Section */}
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-12 z-40">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src="/src/assets/Screenshot 2025-09-21 121236.png"
+            alt="Projects Screenshot"
+            className="h-32 w-auto object-contain opacity-60 hover:opacity-70 transition-opacity duration-300"
+          />
+        </div>
+      </div>
+      
+      <div className="relative z-20 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,12 +72,18 @@ export function ProjectsSection() {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl text-white leading-tight font-mono mb-4 tracking-tight">
-            SELECTED PROJECTS
-          </h2>
-          <p className="text-xs text-gray-500 font-mono uppercase tracking-widest">
-            Production-ready solutions & research initiatives
-          </p>
+          <div className="mb-8">
+            <h2 ref={titleRef} className="text-3xl md:text-4xl text-white leading-tight font-mono tracking-tight">
+              SELECTED PROJECTS
+            </h2>
+            <div className="flex items-center mt-4">
+              <span className="text-white text-lg font-mono mr-3">+</span>
+              <div className="flex-1 h-px bg-white"></div>
+            </div>
+            <p className="text-sm text-white font-mono tracking-wide mt-3 uppercase">
+              Production-ready solutions & research initiatives
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8">
@@ -71,13 +97,38 @@ export function ProjectsSection() {
               className="group relative bg-gray-900/30 border border-gray-800 hover:border-gray-700 transition-all duration-300"
             >
               {/* Project Image */}
-              <div className="aspect-video overflow-hidden">
-                <ImageWithFallback
+              <div className="aspect-video overflow-hidden relative">
+                <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://via.placeholder.com/400x225/1a1a1a/ffffff?text=Project+Image';
+                  }}
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+                
+                {/* Action Buttons Overlay */}
+                <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {project.link && project.link !== '#' && (
+                    <button
+                      onClick={(e) => handleLinkClick(project.link!, e)}
+                      className="bg-black/80 hover:bg-black text-white p-2 rounded-full transition-all duration-300 hover:scale-110"
+                      title="Visit Website"
+                    >
+                      <ExternalLink size={16} />
+                    </button>
+                  )}
+                  {project.github && project.github !== '#' && (
+                    <button
+                      onClick={(e) => handleLinkClick(project.github!, e)}
+                      className="bg-black/80 hover:bg-black text-white p-2 rounded-full transition-all duration-300 hover:scale-110"
+                      title="View on GitHub"
+                    >
+                      <Github size={16} />
+                    </button>
+                  )}
+                </div>
               </div>
 
               {/* Project Content */}
@@ -87,18 +138,24 @@ export function ProjectsSection() {
                     {project.category}
                   </span>
                   <div className="flex gap-2">
-                    <a 
-                      href={project.link}
-                      className="text-gray-400 hover:text-white transition-colors duration-300"
-                    >
-                      <ExternalLink size={16} />
-                    </a>
-                    <a 
-                      href={project.github}
-                      className="text-gray-400 hover:text-white transition-colors duration-300"
-                    >
-                      <Github size={16} />
-                    </a>
+                    {project.link && project.link !== '#' && (
+                      <button
+                        onClick={(e) => handleLinkClick(project.link!, e)}
+                        className="text-gray-400 hover:text-white transition-all duration-300 p-2 rounded border border-gray-700 hover:border-gray-500 hover:bg-gray-800/50"
+                        title="Visit Website"
+                      >
+                        <ExternalLink size={16} />
+                      </button>
+                    )}
+                    {project.github && project.github !== '#' && (
+                      <button
+                        onClick={(e) => handleLinkClick(project.github!, e)}
+                        className="text-gray-400 hover:text-white transition-all duration-300 p-2 rounded border border-gray-700 hover:border-gray-500 hover:bg-gray-800/50"
+                        title="View on GitHub"
+                      >
+                        <Github size={16} />
+                      </button>
+                    )}
                   </div>
                 </div>
 

@@ -1,26 +1,36 @@
+import React from 'react';
 import { motion } from 'motion/react';
+import { useScrollCipherAnimation } from '../hooks/useScrollCipherAnimation';
+import { useCipherAnimation } from '../hooks/useCipherAnimation';
 
 const experiences = [
   {
-    company: 'ANUVRITTIKSHA',
+    company: 'FORNAX EVERUSEFUL PVT. LTD.',
     role: 'Backend Developer',
     period: 'JUN 2025 - CURRENT',
-    description: 'Developing backend systems and ETL pipelines using Python and Node.js. Integrated AWS services (EC2, DynamoDB, S3) with CRUD pipelines via GitHub Actions.',
-    website: 'anuvrittiksha.com'
+    description: 'Developing backend systems and ETL pipelines using Python and Node.js. Integrated AWS services (EC2, DynamoDB, S3) with CRUD pipelines via GitHub Actions. Implemented CI/CD pipelines and containerized applications using Docker.',
+    website: 'amoghconnect.com'
   },
   {
     company: 'ANUVRITTIKSHA PVT. LTD',
     role: 'Associate Developer Intern',
     period: 'OCT 2024 - APR 2025',
     description: 'Backend systems and ETL pipelines using Python and Node.js. AWS services including S3, Glue, DynamoDB, Polly, and Transcribe. Collaborated using Scrum, Microsoft Teams, and SharePoint.',
-    website: 'anuvrittiksha.com'
+    website: 'howtoalgo.com'
   },
   {
     company: 'DRDO',
     role: 'Summer Intern',
-    period: 'JUN 2024 - JUL 2024',
+    period: 'JUN 2025 - JUL 2025',
     description: 'Designed and developed AI-powered agents leveraging Machine Learning and Web technologies. Mentored 15+ weekly threat indicators relevant to national security.',
     website: null
+  },
+  {
+    company: 'ANUVRITTIKSHA PVT. LTD',
+    role: 'Creative Technology Developer Intern',
+    period: 'AUG 2024 - SEPT 2024',
+    description: 'Created technical scripts and engaging animations for DSA tutorials. Enhanced problem-solving, design, and technical communication skills.',
+    website: 'howtoalgo.com'
   },
   {
     company: 'APNA GUIDE',
@@ -50,13 +60,21 @@ const achievements = [
 const technologies = [
   { category: 'LANGUAGES', items: ['Python', 'C++', 'JavaScript', 'HTML', 'CSS'] },
   { category: 'DATABASES', items: ['MySQL', 'PostgreSQL', 'DynamoDB'] },
-  { category: 'CLOUD & DEVOPS', items: ['AWS', 'EC2', 'S3', 'Docker', 'GitHub Actions'] },
-  { category: 'FRAMEWORKS', items: ['Flask', 'REST APIs', 'Microservices', 'Scrum'] }
+  { category: 'CLOUD & DEVOPS', items: ['AWS', 'EC2', 'S3', 'Docker', 'GitHub Actions', 'Firebase', 'Hostinger'] },
+  { category: 'FRAMEWORKS', items: ['Flask', 'REST APIs', 'Microservices', 'Scrum', 'JWT'] },
+  { category: 'ML & AI', items: ['Machine Learning', 'Agentic AI', 'n8n', 'Data Analysis'] }
 ];
 
 export function ExperienceSection() {
+  const titleRef = useScrollCipherAnimation('PROFESSIONAL EXPERIENCE', { delay: 200, duration: 500 });
+  const languagesRef = useScrollCipherAnimation('LANGUAGES', { delay: 300, duration: 400 });
+  const databasesRef = useScrollCipherAnimation('DATABASES', { delay: 300, duration: 400 });
+  const cloudRef = useScrollCipherAnimation('CLOUD & DEVOPS', { delay: 300, duration: 400 });
+  const frameworksRef = useScrollCipherAnimation('FRAMEWORKS', { delay: 300, duration: 400 });
+  const mlRef = useScrollCipherAnimation('ML & AI', { delay: 300, duration: 400 });
+
   return (
-    <section className="py-20 px-8 bg-black relative">
+    <section id="experience" className="py-20 px-8 bg-black relative">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-15">
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
@@ -65,6 +83,17 @@ export function ExperienceSection() {
           alt="Technology Background"
           className="w-full h-full object-cover"
         />
+      </div>
+
+      {/* Screenshot Image Section */}
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-12 z-40">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src="/src/assets/Screenshot 2025-09-21 121203.png"
+            alt="Experience Screenshot"
+            className="h-32 w-auto object-contain opacity-60 hover:opacity-70 transition-opacity duration-300"
+          />
+        </div>
       </div>
 
       <div className="relative z-20 max-w-6xl mx-auto">
@@ -77,11 +106,20 @@ export function ExperienceSection() {
           className="grid lg:grid-cols-2 gap-16 mb-20"
         >
           <div>
-            <h2 className="text-3xl md:text-4xl text-white leading-tight font-mono mb-8 tracking-tight">
-              PROFESSIONAL
-              <br />
-              EXPERIENCE
-            </h2>
+            <div className="mb-8">
+              <h2 ref={titleRef} className="text-3xl md:text-4xl text-white leading-tight font-mono tracking-tight">
+                PROFESSIONAL
+                <br />
+                EXPERIENCE
+              </h2>
+              <div className="flex items-center mt-4">
+                <span className="text-white text-lg font-mono mr-3">+</span>
+                <div className="flex-1 h-px bg-white"></div>
+              </div>
+              <p className="text-sm text-white font-mono tracking-wide mt-3 uppercase">
+                Backend development, machine learning & DevOps solutions
+              </p>
+            </div>
           </div>
 
           <div className="space-y-8">
@@ -90,9 +128,9 @@ export function ExperienceSection() {
                 CURRENT FOCUS
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-mono mb-4">
-                Backend development and machine learning 
-                solutions with emphasis on scalable 
-                cloud architecture and security.
+                Backend development, machine learning, and DevOps 
+                solutions with emphasis on scalable cloud 
+                architecture, containerization, and CI/CD pipelines.
               </p>
               <p className="text-xs text-gray-400 leading-relaxed font-mono">
                 Pursuing B.Tech in Computer Science at 
@@ -128,9 +166,14 @@ export function ExperienceSection() {
                 </span>
                 {exp.website && (
                   <div className="mt-2">
-                    <span className="text-xs text-gray-600 font-mono">
+                    <a 
+                      href={`https://${exp.website}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-gray-600 font-mono hover:text-gray-400 transition-colors duration-300"
+                    >
                       {exp.website}
-                    </span>
+                    </a>
                   </div>
                 )}
               </div>
@@ -168,7 +211,14 @@ export function ExperienceSection() {
                   transition={{ duration: 0.6, delay: 0.7 + (index * 0.1) }}
                   viewport={{ once: true }}
                 >
-                  <h6 className="text-xs text-gray-500 font-mono tracking-wider uppercase mb-2">
+                  <h6 
+                    ref={tech.category === 'LANGUAGES' ? languagesRef : 
+                         tech.category === 'DATABASES' ? databasesRef :
+                         tech.category === 'CLOUD & DEVOPS' ? cloudRef :
+                         tech.category === 'FRAMEWORKS' ? frameworksRef :
+                         tech.category === 'ML & AI' ? mlRef : null}
+                    className="text-xs text-gray-500 font-mono tracking-wider uppercase mb-2"
+                  >
                     {tech.category}
                   </h6>
                   <div className="flex flex-wrap gap-2">
