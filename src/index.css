@@ -499,6 +499,10 @@
     display: grid;
   }
 
+  .hidden {
+    display: none;
+  }
+
   .inline-block {
     display: inline-block;
   }
@@ -1104,6 +1108,200 @@
     .md\:text-7xl {
       font-size: var(--text-7xl);
       line-height: var(--tw-leading, var(--text-7xl--line-height));
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:flex {
+      display: flex;
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:hidden {
+      display: none;
+    }
+  }
+
+  /* Mobile-specific responsive styles */
+  @media (max-width: 47.99rem) {
+    .mobile\:text-xs {
+      font-size: var(--text-xs);
+      line-height: var(--tw-leading, var(--text-xs--line-height));
+    }
+    
+    .mobile\:text-sm {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+    
+    .mobile\:text-lg {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+    
+    .mobile\:text-xl {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+    
+    .mobile\:text-2xl {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+    
+    .mobile\:text-3xl {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+    
+    .mobile\:text-base {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+    
+    .mobile\:px-4 {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+    
+    .mobile\:px-6 {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+    
+    .mobile\:pl-8 {
+      padding-left: calc(var(--spacing) * 8);
+    }
+    
+    .mobile\:pl-4 {
+      padding-left: calc(var(--spacing) * 4);
+    }
+    
+    .mobile\:py-3 {
+      padding-block: calc(var(--spacing) * 3);
+    }
+    
+    .mobile\:py-4 {
+      padding-block: calc(var(--spacing) * 4);
+    }
+    
+    .mobile\:py-6 {
+      padding-block: calc(var(--spacing) * 6);
+    }
+    
+    .mobile\:py-8 {
+      padding-block: calc(var(--spacing) * 8);
+    }
+    
+    .mobile\:py-2 {
+      padding-block: calc(var(--spacing) * 2);
+    }
+    
+    .mobile\:px-2 {
+      padding-inline: calc(var(--spacing) * 2);
+    }
+    
+    .mobile\:pt-20 {
+      padding-top: calc(var(--spacing) * 20);
+    }
+    
+    .mobile\:pt-24 {
+      padding-top: calc(var(--spacing) * 24);
+    }
+    
+    .mobile\:mt-4 {
+      margin-top: calc(var(--spacing) * 4);
+    }
+    
+    .mobile\:mt-6 {
+      margin-top: calc(var(--spacing) * 6);
+    }
+    
+    .mobile\:mt-8 {
+      margin-top: calc(var(--spacing) * 8);
+    }
+    
+    .mobile\:mb-4 {
+      margin-bottom: calc(var(--spacing) * 4);
+    }
+    
+    .mobile\:mb-6 {
+      margin-bottom: calc(var(--spacing) * 6);
+    }
+    
+    .mobile\:mb-8 {
+      margin-bottom: calc(var(--spacing) * 8);
+    }
+    
+    .mobile\:space-y-3 > :not(:last-child) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
+    
+    .mobile\:space-y-4 > :not(:last-child) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+    }
+    
+    .mobile\:space-y-6 > :not(:last-child) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+    }
+    
+    .mobile\:gap-4 {
+      gap: calc(var(--spacing) * 4);
+    }
+    
+    .mobile\:gap-6 {
+      gap: calc(var(--spacing) * 6);
+    }
+    
+    .mobile\:gap-8 {
+      gap: calc(var(--spacing) * 8);
+    }
+    
+    .mobile\:leading-tight {
+      --tw-leading: var(--leading-tight);
+      line-height: var(--leading-tight);
+    }
+    
+    .mobile\:leading-relaxed {
+      --tw-leading: var(--leading-relaxed);
+      line-height: var(--leading-relaxed);
+    }
+    
+    .mobile\:max-w-sm {
+      max-width: var(--container-sm);
+    }
+    
+    .mobile\:text-center {
+      text-align: center;
+    }
+    
+    .mobile\:block {
+      display: block;
+    }
+    
+    .mobile\:flex {
+      display: flex;
+    }
+    
+    .mobile\:flex-col {
+      flex-direction: column;
+    }
+    
+    .mobile\:items-center {
+      align-items: center;
+    }
+    
+    .mobile\:justify-center {
+      justify-content: center;
+    }
+    
+    .mobile\:justify-between {
+      justify-content: space-between;
     }
   }
 
