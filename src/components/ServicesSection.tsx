@@ -59,7 +59,7 @@ export function ServicesSection() {
   const cloudRef = useScrollCipherAnimation('CLOUD & DEVOPS', { delay: 200, duration: 600 });
 
   return (
-    <section className="py-20 px-8 bg-black relative">
+    <section className="py-20 mb-20 px-8 bg-black relative">
       <div className="relative z-20 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <motion.div

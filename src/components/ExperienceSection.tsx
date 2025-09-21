@@ -86,7 +86,7 @@ export function ExperienceSection() {
       </div>
 
       {/* Screenshot Image Section */}
-      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-12 z-40">
+      <div className=" absolute top-0 mt-20 pt-20 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-12 z-40">
         <div className="absolute inset-0 flex items-center justify-center">
           <img 
             src="/src/assets/Screenshot 2025-09-21 121203.png"
@@ -96,14 +96,14 @@ export function ExperienceSection() {
         </div>
       </div>
 
-      <div className="relative z-20 max-w-6xl mx-auto">
+      <div className="mt-20 relative z-20 max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="grid lg:grid-cols-2 gap-16 mb-20"
+          className="grid lg:grid-cols-2 gap-16 mb-20 px-4 py-8"
         >
           <div>
             <div className="mb-8">
