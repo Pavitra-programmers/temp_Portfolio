@@ -17,7 +17,7 @@ const services = [
       content: 'Full-stack backend systems from API design to database optimization and cloud deployment.',
       additional: 'Built for scale. Optimized for performance. Deployed with confidence.'
     },
-    image: '/src/assets/1.avif'
+    image: '/assets/1.avif'
   },
   {
     title: 'MACHINE LEARNING',
@@ -33,7 +33,7 @@ const services = [
       content: 'From concept to production, ML models that solve real-world problems with measurable impact.',
       additional: 'Data-driven insights. Intelligent automation. Future-ready solutions.'
     },
-    image: '/src/assets/5.png'
+    image: '/assets/5.png'
   },
   {
     title: 'CLOUD & DEVOPS',
@@ -49,7 +49,7 @@ const services = [
       content: 'Cloud-native solutions with automated deployment pipelines and scalable infrastructure.',
       additional: 'Zero-downtime deployments. Automated scaling. Production-ready systems.'
     },
-    image: '/src/assets/1.avif'
+    image: '/assets/1.avif'
   }
 ];
 

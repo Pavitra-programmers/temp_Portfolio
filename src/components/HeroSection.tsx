@@ -14,7 +14,7 @@ export function HeroSection() {
       <div className="absolute inset-0 opacity-42">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black z-10" />
         <img 
-          src="/src/assets/4.jpg"
+          src="/assets/4.jpg"
           alt="Professional Tech Workspace"
           className="w-full h-full object-cover"
         />

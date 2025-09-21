@@ -79,7 +79,7 @@ export function ExperienceSection() {
       <div className="relative h-96 bg-gradient-to-b from-transparent to-black/80 mb-8">
         <div className="absolute inset-0 flex items-center justify-center">
           <img 
-            src="/src/assets/10.jpg"
+            src="/assets/10.jpg"
             alt="Experience Screenshot"
             className="h-80 w-full object-contain opacity-40 hover:opacity-70 transition-opacity duration-300"
           />
@@ -91,7 +91,7 @@ export function ExperienceSection() {
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
           <img 
-            src="/src/assets/2.jpg"
+            src="/assets/2.jpg"
             alt="Technology Background"
             className="w-full h-full object-cover"
           />

@@ -40,7 +40,7 @@ export function ContactSection() {
         <div className="absolute inset-0 opacity-40 z-5">
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
           <img 
-            src="/src/assets/3.jpg"
+            src="/assets/3.jpg"
             alt="Neural Network Background"
             className="w-full h-full object-cover"
           />
@@ -50,7 +50,7 @@ export function ContactSection() {
         <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/80 pb-12 z-40">
           <div className="absolute inset-0 flex items-center justify-center">
             <img 
-              src="/src/assets/12.jpg"
+              src="/assets/12.jpg"
               alt="Spektral Studio"
               className="h-32 w-auto object-contain opacity-50 hover:opacity-95 transition-opacity duration-300"
             />
@@ -196,7 +196,7 @@ export function ContactSection() {
       <div className="space-y-8 bottom-0">
         <div>
           <img 
-            src="/src/assets/11.jpg"
+            src="/assets/11.jpg"
             alt="Experience Screenshot"
             className="h-32 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity duration-300"
           />

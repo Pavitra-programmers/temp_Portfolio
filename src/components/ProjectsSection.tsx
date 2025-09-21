@@ -8,7 +8,7 @@ const projects = [
     title: 'Customer Churn Prediction',
     category: 'MACHINE LEARNING',
     description: 'Leveraged predictive modeling to identify potential customer churn using advanced ML algorithms. Deployed using Flask backend with Scikit-learn for model serving.',
-    image: 'src/assets/6.webp',
+    image: '/assets/6.webp',
     technologies: ['Python', 'Scikit-learn', 'Flask', 'Data Analysis'],
     link: 'https://costumer-churn-prediction-rq8j.onrender.com/',
     github: 'https://github.com/Pavitra-programmers/Costumer-Churn-Prediction'
@@ -17,7 +17,7 @@ const projects = [
     title: 'Campus Vehicle Access Management System',
     category: 'COMPUTER VISION',
     description: 'Automated system designed to detect vehicle number plates and manage entry/exit of vehicles on college campus. Utilizes advanced image recognition and machine learning technologies.',
-    image: 'src/assets/7.webp',
+    image: '/assets/7.webp',
     technologies: ['Python', 'OpenCV', 'Machine Learning', 'Computer Vision'],
     link: 'https://github.com/Pavitra-programmers/Campus-Vehicle-Access-Management-System-CVAMS',
     github: 'https://github.com/Pavitra-programmers/Campus-Vehicle-Access-Management-System-CVAMS'
@@ -26,7 +26,7 @@ const projects = [
     title: 'Tic-Tac-AI',
     category: 'AI GAME DEVELOPMENT',
     description: 'AI-powered Tic-Tac-Toe game with unbeatable strategy implementation. Utilized Flask for backend logic and advanced game theory algorithms.',
-    image: 'src/assets/8.webp',
+    image: '/assets/8.webp',
     technologies: ['Python', 'Flask', 'AI Algorithms', 'Game Theory'],
     link: 'https://costumer-churn-prediction-rq8j.onrender.com/',
     github: 'https://github.com/Pavitra-programmers/TIC-TAC-TOE-AI'
@@ -35,7 +35,7 @@ const projects = [
     title: 'Quantum Encryption using WatsonX AI',
     category: 'QUANTUM COMPUTING',
     description: 'Advanced quantum encryption system leveraging IBM WatsonX AI capabilities. Implements quantum key distribution and cryptographic protocols for enhanced security.',
-    image: 'src/assets/1.avif',
+    image: '/assets/1.avif',
     technologies: ['Python', 'Quantum Computing', 'IBM WatsonX', 'Cryptography'],
     link: 'https://github.com/Pavitra-programmers/Quantum-Encryption-using-WatsonXAi',
     github: 'https://github.com/Pavitra-programmers/Quantum-Encryption-using-WatsonXAi'
@@ -57,13 +57,15 @@ export function ProjectsSection() {
       <div className="relative h-96 bg-gradient-to-b from-transparent to-black/80 mb-8">
         <div className="absolute inset-0 flex items-center justify-center">
           <img 
-            src="/src/assets/9.jpg"
+            src="/assets/9.jpg"
             alt="Projects Screenshot"
             className="h-80 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity duration-300"
           />
         </div>
       </div>
-
+      <div className='h-10 w-10 bg-gray-800/30 border border-gray-700 hover:border-gray-600 transition-all duration-300'>
+        
+      </div>
       <section id="projects" className="py-20 mt-20 mb-20 px-8 bg-black relative">
         <div className="relative mb-20 z-20 max-w-6xl mx-auto">
       
