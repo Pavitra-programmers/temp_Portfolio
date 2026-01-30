@@ -6,48 +6,51 @@ const services = [
   {
     title: 'BACKEND DEVELOPMENT',
     categories: [
-      'Python & Node.js',
-      'REST APIs & Microservices',
-      'ETL Pipeline Development',
-      'Database Design (MySQL, PostgreSQL, DynamoDB)',
-      'System Architecture & Scalability'
+      'Python (Flask, Django) & Node.js (Express)',
+      'RESTful APIs & Microservices Architecture',
+      'ETL Pipeline Engineering & Data Processing',
+      'Database Design & Optimization (MySQL, PostgreSQL, DynamoDB, MongoDB)',
+      'System Architecture, Scalability & Performance Tuning',
+      'Event-Driven Architecture & Message Queues'
     ],
     description: {
-      title: 'INFRASTRUCTURE',
-      content: 'Full-stack backend systems from API design to database optimization and cloud deployment.',
-      additional: 'Built for scale. Optimized for performance. Deployed with confidence.'
+      title: 'BACKEND SYSTEMS',
+      content: 'Enterprise-grade backend architectures from API design to database optimization and cloud deployment. Building high-performance, fault-tolerant systems that handle millions of requests.',
+      additional: 'Engineered for scale. Optimized for performance. Battle-tested in production.'
     },
     image: '/assets/1.avif'
   },
   {
-    title: 'MACHINE LEARNING',
+    title: 'MACHINE LEARNING & AI',
     categories: [
-      'Predictive Analytics & Modeling',
-      'Computer Vision & AI Agents',
-      'Data Preprocessing & Feature Engineering',
-      'Model Deployment & MLOps',
-      'Big Data Processing'
+      'Predictive Analytics & Statistical Modeling',
+      'Computer Vision & AI Agent Development',
+      'Natural Language Processing (NLP)',
+      'Data Preprocessing, Feature Engineering & Model Training',
+      'MLOps & Production Model Deployment',
+      'Big Data Processing & Real-time Analytics'
     ],
     description: {
-      title: 'INTELLIGENT SYSTEMS',
-      content: 'From concept to production, ML models that solve real-world problems with measurable impact.',
-      additional: 'Data-driven insights. Intelligent automation. Future-ready solutions.'
+      title: 'AI SOLUTIONS',
+      content: 'Production-ready ML models and AI agents that solve complex business problems with measurable ROI. From data pipeline to deployment, delivering intelligent systems that scale.',
+      additional: 'Data-driven decision making. Intelligent automation. Enterprise AI solutions.'
     },
     image: '/assets/5.png'
   },
   {
     title: 'CLOUD & DEVOPS',
     categories: [
-      'AWS Services (EC2, S3, DynamoDB)',
-      'Docker & Kubernetes',
-      'CI/CD Pipeline Development',
-      'GitLab & GitHub Actions',
-      'Infrastructure as Code'
+      'Google Cloud Platform (GKE, Compute Engine)',
+      'AWS Services (EC2, S3, DynamoDB, Glue)',
+      'Kubernetes Orchestration & Docker Containerization',
+      'Infrastructure as Code (Terraform, Helm, Skaffold)',
+      'CI/CD Automation (GitHub Actions, GitLab)',
+      'Microservices Architecture & Service Mesh'
     ],
     description: {
-      title: 'DEPLOYMENT',
-      content: 'Cloud-native solutions with automated deployment pipelines and scalable infrastructure.',
-      additional: 'Zero-downtime deployments. Automated scaling. Production-ready systems.'
+      title: 'CLOUD INFRASTRUCTURE',
+      content: 'Enterprise-grade cloud-native solutions with automated deployment pipelines, container orchestration, and infrastructure as code. Architecting scalable, resilient systems on GKE and AWS.',
+      additional: 'Zero-downtime deployments. Auto-scaling infrastructure. Production-hardened systems with 99.9% uptime.'
     },
     image: '/assets/1.avif'
   }
@@ -55,7 +58,7 @@ const services = [
 
 export function ServicesSection() {
   const backendRef = useScrollCipherAnimation('BACKEND DEVELOPMENT', { delay: 200, duration: 600 });
-  const mlRef = useScrollCipherAnimation('MACHINE LEARNING', { delay: 200, duration: 600 });
+  const mlRef = useScrollCipherAnimation('MACHINE LEARNING & AI', { delay: 200, duration: 600 });
   const cloudRef = useScrollCipherAnimation('CLOUD & DEVOPS', { delay: 200, duration: 600 });
 
   return (
@@ -85,7 +88,7 @@ export function ServicesSection() {
             <div className="relative z-10">
               <h2 
                 ref={service.title === 'BACKEND DEVELOPMENT' ? backendRef : 
-                     service.title === 'MACHINE LEARNING' ? mlRef :
+                     service.title === 'MACHINE LEARNING & AI' ? mlRef :
                      service.title === 'CLOUD & DEVOPS' ? cloudRef : null}
                 className="text-3xl md:text-4xl text-white leading-tight font-mono mb-8 tracking-tight"
               >

@@ -49,7 +49,7 @@ export function AboutSection() {
               <div className="flex items-center gap-4">
                 <span className="text-gray-500 font-mono">|</span>
                 <span className="text-gray-400 text-sm tracking-[0.1em] font-mono uppercase">
-                  Backend Developer & ML Engineer
+                  DevOps Engineer & Backend Developer
                 </span>
               </div>
               <div className="flex items-center gap-4">
@@ -72,39 +72,39 @@ export function AboutSection() {
             {/* About Description */}
             <div>
               <h2 className="text-4xl md:text-5xl text-white leading-tight font-mono mb-12 tracking-tight uppercase">
-                Integrated Backend
+                Cloud Native
                 <br />
-                Development
+                Infrastructure
               </h2>
 
               <div className="space-y-8">
                 <div>
                   <h4 className="text-sm text-gray-300 tracking-[0.15em] font-mono uppercase mb-4">
-                    Backend Focus
+                    DevOps Excellence
                   </h4>
                   <p className="text-gray-400 text-sm leading-relaxed font-mono max-w-md">
-                    → Full-spectrum backend architectures from 
-                    modern systems to authentic strategy and 
-                    robust exploration.
-                  </p>
+                    → Architecting production-grade multi-service 
+                    infrastructures on Google Kubernetes Engine (GKE) 
+                    using Helm, Skaffold, and Terraform. Implementing 
+                    p>
                   <p className="text-gray-500 text-sm leading-relaxed font-mono max-w-md mt-4">
-                    If it doesn't exist, we design it. If 
-                    it does, we improve it.
+                    Building scalable, resilient systems 
+                    that grow with your needs.
                   </p>
                 </div>
 
                 <div>
                   <h4 className="text-sm text-gray-300 tracking-[0.15em] font-mono uppercase mb-4">
-                    ML Production
+                    Backend Systems
                   </h4>
                   <p className="text-gray-400 text-sm leading-relaxed font-mono max-w-md">
-                    → From model to motion. Assets are engineered 
-                    for game engines, built production, or 
-                    cross-platform deployment.
+                    → Developing robust ETL pipelines and backend 
+                    architectures using Python and Node.js. 
+                    Integrating AWS and GCP services seamlessly.
                   </p>
                   <p className="text-gray-500 text-sm leading-relaxed font-mono max-w-md mt-4">
-                    Built to spec.
-                    Delivered on time.
+                    From concept to production.
+                    Optimized and secure.
                   </p>
                 </div>
 
@@ -113,13 +113,13 @@ export function AboutSection() {
                     Cloud Infrastructure
                   </h4>
                   <p className="text-gray-400 text-sm leading-relaxed font-mono max-w-md">
-                    → Scope expands. Specs change. Deadlines 
-                    shift. Adaptive support absorbs the hit so 
-                    delivery stays on course.
+                    → Containerization with Docker, orchestration 
+                    with Kubernetes. Infrastructure as Code with 
+                    Terraform and automated workflows.
                   </p>
                   <p className="text-gray-500 text-sm leading-relaxed font-mono max-w-md mt-4">
-                    We respond like we're part of your 
-                    team—because we are.
+                    Delivering reliable infrastructure 
+                    that scales effortlessly.
                   </p>
                 </div>
               </div>

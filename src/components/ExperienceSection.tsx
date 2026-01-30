@@ -5,64 +5,64 @@ import { useCipherAnimation } from '../hooks/useCipherAnimation';
 
 const experiences = [
   {
-    company: 'FORNAX EVERUSEFUL PVT. LTD.',
-    role: 'Backend Developer',
-    period: 'JUN 2025 - CURRENT',
-    description: 'Developing backend systems and ETL pipelines using Python and Node.js. Integrated AWS services (EC2, DynamoDB, S3) with CRUD pipelines via GitHub Actions. Implemented CI/CD pipelines and containerized applications using Docker.',
-    website: 'amoghconnect.com'
+    company: 'WOOTZAPP PVT. LTD. (ARAKOO)',
+    role: 'DevOps Intern',
+    period: 'NOV 2025 - CURRENT',
+    description: 'Architected and deployed production-grade multi-service AI gateway infrastructure on Google Kubernetes Engine (GKE) utilizing Helm charts, Skaffold for rapid iteration, and Terraform for infrastructure as code. Engineered a double-entry ledger billing system with audit-grade financial tracking, implementing temporal pricing controls and event-driven worker queues for high-throughput transaction processing.',
+    website: 'scost.arakoo.com'
   },
   {
-    company: 'ANUVRITTIKSHA PVT. LTD',
-    role: 'Associate Developer Intern',
-    period: 'OCT 2024 - APR 2025',
-    description: 'Backend systems and ETL pipelines using Python and Node.js. AWS services including S3, Glue, DynamoDB, Polly, and Transcribe. Collaborated using Scrum, Microsoft Teams, and SharePoint.',
-    website: 'howtoalgo.com'
+    company: 'FORNAX EVERUSEFUL PVT. LTD.',
+    role: 'Backend and DevOps Intern',
+    period: 'JUL 2025 - OCT 2025',
+    description: 'Architected and implemented scalable backend systems and ETL pipelines using Python and Node.js. Orchestrated AWS cloud services (EC2, DynamoDB, S3) integration with automated CI/CD workflows via GitHub Actions, achieving 25% reduction in deployment cycles. Optimized cloud infrastructure through strategic resource allocation and autoscaling policies, resulting in 35% improvement in system scalability and cost efficiency.',
+    website: 'amoghconnect.com'
   },
   {
     company: 'DRDO',
     role: 'Summer Intern',
     period: 'JUN 2025 - JUL 2025',
-    description: 'Designed and developed AI-powered agents leveraging Machine Learning and Web technologies. Mentored 15+ weekly threat indicators relevant to national security.',
+    description: 'Engineered AI-powered intelligence agents leveraging advanced Machine Learning algorithms and web scraping frameworks for national security applications. Developed automated workflows for real-time open-source intelligence (OSINT) analysis, reducing manual review time by 30% while maintaining 95%+ accuracy in threat indicator identification and classification.',
     website: null
   },
   {
     company: 'ANUVRITTIKSHA PVT. LTD',
-    role: 'Creative Technology Developer Intern',
-    period: 'AUG 2024 - SEPT 2024',
-    description: 'Created technical scripts and engaging animations for DSA tutorials. Enhanced problem-solving, design, and technical communication skills.',
+    role: 'Associate Developer Intern',
+    period: 'OCT 2024 - APR 2025',
+    description: 'Designed and implemented enterprise-grade backend systems and ETL pipelines using Python and Node.js, achieving 40% reduction in data processing latency. Integrated AWS cloud services (S3, Glue, DynamoDB, Polly, Transcribe) to build automated data workflows, improving operational efficiency by 35% and enhancing system reliability across multiple production modules.',
     website: 'howtoalgo.com'
   },
   {
-    company: 'APNA GUIDE',
-    role: 'Machine Learning Intern',
-    period: 'JUN 2024 - JUL 2024',
-    description: 'Preprocessed data, trained and evaluated ML models. Gained hands-on experience in threat analysis, vulnerability assessment, and security protocols.',
-    website: null
+    company: 'ANUVRITTIKSHA PVT. LTD',
+    role: 'Creative Technology Developer Intern',
+    period: 'SEPT 2024',
+    description: 'Developed technical educational content including scripts and animations for Data Structures and Algorithms tutorials. Strengthened technical communication, problem-solving methodologies, and instructional design capabilities.',
+    website: 'howtoalgo.com'
   },
   {
     company: 'ACMEGRADE',
     role: 'Cybersecurity Intern',
     period: 'JAN 2024 - MAR 2024',
-    description: 'Industry Relevant Training and hardening. Gained hands-on experience in threat analysis, vulnerability assessment, and security protocols.',
+    description: 'Executed comprehensive security assessments including threat analysis and vulnerability testing across enterprise systems, identifying and documenting 150+ potential security vulnerabilities. Implemented advanced security protocols and hardening measures, successfully mitigating 200+ attempted intrusions and strengthening overall system security posture.',
     website: null
   }
 ];
 
 const achievements = [
   'RELIANCE FOUNDATION SCHOLAR 2023',
-  'HACKDEMY 2025 - 2ND POSITION',
+  'HACKAWAY 2025 - 2ND POSITION',
   'IBM TECHXCHANGE 2024 - 5TH RANK',
-  'IDS START PROGRAMME CERTIFICATION',
+  'IIRS START PROGRAMME CERTIFICATION (ISRO)',
   'DOCKER & KUBERNETES CERTIFIED',
-  'MACHINE LEARNING WITH BIG DATA'
+  'CYBER SECURITY TRAINING COMPLETION'
 ];
 
 const technologies = [
-  { category: 'LANGUAGES', items: ['Python', 'C++', 'JavaScript', 'HTML', 'CSS'] },
-  { category: 'DATABASES', items: ['MySQL', 'PostgreSQL', 'DynamoDB'] },
-  { category: 'CLOUD & DEVOPS', items: ['AWS', 'EC2', 'S3', 'Docker', 'GitHub Actions', 'Firebase', 'Hostinger'] },
-  { category: 'FRAMEWORKS', items: ['Flask', 'REST APIs', 'Microservices', 'Scrum', 'JWT'] },
-  { category: 'ML & AI', items: ['Machine Learning', 'Agentic AI', 'n8n', 'Data Analysis'] }
+  { category: 'LANGUAGES', items: ['Python', 'C/C++', 'JavaScript', 'SQL', 'HTML', 'CSS'] },
+  { category: 'DATABASES', items: ['MySQL', 'PostgreSQL', 'DynamoDB', 'S3', 'MongoDB', 'Knex.js'] },
+  { category: 'CLOUD & DEVOPS', items: ['AWS (EC2, S3, Glue)', 'Google Cloud (GKE)', 'Docker', 'Kubernetes', 'Terraform', 'Helm', 'Skaffold', 'GitHub Actions', 'CI/CD'] },
+  { category: 'FRAMEWORKS', items: ['Flask', 'Django', 'React.js', 'Node.js', 'Express.js', 'REST APIs', 'Microservices', 'JWT', 'Tailwind CSS'] },
+  { category: 'ML & AI', items: ['Machine Learning', 'Hugging Face', 'N8N Automation', 'NLP', 'Data Analysis'] }
 ];
 
 export function ExperienceSection() {
@@ -118,7 +118,7 @@ export function ExperienceSection() {
                 <div className="flex-1 h-px bg-white"></div>
               </div>
               <p className="text-sm text-white font-mono tracking-wide mt-3 uppercase">
-                Backend development, machine learning & DevOps solutions
+                DevOps, Cloud Infrastructure & Backend Development
               </p>
             </div>
           </div>
@@ -129,9 +129,10 @@ export function ExperienceSection() {
                 CURRENT FOCUS
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-mono mb-4">
-                Backend development, machine learning, and DevOps 
-                solutions with emphasis on scalable cloud 
-                architecture, containerization, and CI/CD pipelines.
+                Specialized in cloud-native DevOps engineering, 
+                Kubernetes orchestration, infrastructure as code 
+                (Terraform), and building production-grade scalable 
+                backend systems with automated CI/CD pipelines.
               </p>
               <p className="text-xs text-gray-400 leading-relaxed font-mono">
                 Pursuing B.Tech in Computer Science at 
