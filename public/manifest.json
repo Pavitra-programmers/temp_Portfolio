@@ -1,21 +1,28 @@
 {
-  "name": "Kritensh Kumar - Portfolio",
+  "name": "Kritensh Kumar - DevOps Engineer, Backend Developer & ML Engineer",
   "short_name": "Kritensh Kumar",
-  "description": "Backend Developer, ML Engineer & DevOps Portfolio",
+  "description": "DevOps Intern at Wootzapp (Arakoo), Backend Developer & Machine Learning Engineer. Expert in Kubernetes, GKE, Terraform, Python, AWS, Docker. Working on StringCost, HowToAlgo. Central University of Jammu.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#000000",
   "theme_color": "#000000",
+  "categories": ["portfolio", "developer", "devops", "backend", "machine-learning"],
+  "lang": "en-US",
+  "dir": "ltr",
   "icons": [
     {
       "src": "/assets/logo.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/assets/logo.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

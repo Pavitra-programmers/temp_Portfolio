@@ -8,8 +8,8 @@ const experiences = [
     company: 'WOOTZAPP PVT. LTD. (ARAKOO)',
     role: 'DevOps Intern',
     period: 'NOV 2025 - CURRENT',
-    description: 'Architected and deployed production-grade multi-service AI gateway infrastructure on Google Kubernetes Engine (GKE) utilizing Helm charts, Skaffold for rapid iteration, and Terraform for infrastructure as code. Engineered a double-entry ledger billing system with audit-grade financial tracking, implementing temporal pricing controls and event-driven worker queues for high-throughput transaction processing.',
-    website: 'scost.arakoo.com'
+    description: 'Architected and deployed production-grade multi-service AI gateway infrastructure on Google Kubernetes Engine (GKE) utilizing Helm charts, Skaffold for rapid iteration, and Terraform for infrastructure as code. Engineered a comprehensive cost management platform for AI services, providing real-time usage tracking, billing analytics, and budget controls for LLM API consumption.',
+    website: 'app.stringcost.com'
   },
   {
     company: 'FORNAX EVERUSEFUL PVT. LTD.',
