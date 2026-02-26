@@ -16,8 +16,8 @@ export function ContactSection() {
     {
       icon: Phone,
       label: 'PHONE',
-      value: '+91 9103258699',
-      href: 'tel:+919103258699'
+      value: '+91 910XXXXXXX',
+      href: 'tel:+91910XXXXXXX'
     },
     {
       icon: Github,
