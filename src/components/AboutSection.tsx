@@ -49,7 +49,7 @@ export function AboutSection() {
               <div className="flex items-center gap-4">
                 <span className="text-gray-500 font-mono">|</span>
                 <span className="text-gray-400 text-sm tracking-[0.1em] font-mono uppercase">
-                  DevOps Engineer & Backend Developer
+                  Software Developer Intern
                 </span>
               </div>
               <div className="flex items-center gap-4">
@@ -72,24 +72,26 @@ export function AboutSection() {
             {/* About Description */}
             <div>
               <h2 className="text-4xl md:text-5xl text-white leading-tight font-mono mb-12 tracking-tight uppercase">
-                Cloud Native
+                Generative AI
                 <br />
-                Infrastructure
+                & Backend Systems
               </h2>
 
               <div className="space-y-8">
                 <div>
                   <h4 className="text-sm text-gray-300 tracking-[0.15em] font-mono uppercase mb-4">
-                    DevOps Excellence
+                    LLM Gateway Engineering
                   </h4>
                   <p className="text-gray-400 text-sm leading-relaxed font-mono max-w-md">
-                    → Architecting production-grade multi-service 
-                    infrastructures on Google Kubernetes Engine (GKE) 
-                    using Helm, Skaffold, and Terraform. Implementing 
-                    p>
+                    → Building full-stack LLM gateway platforms with
+                    Next.js dashboards, Hono-based proxy layers, and
+                    HMAC-signed presigned session URLs. Unifying 250+
+                    AI providers behind multi-tenant RBAC workspaces
+                    with MCP tool server orchestration.
+                  </p>
                   <p className="text-gray-500 text-sm leading-relaxed font-mono max-w-md mt-4">
-                    Building scalable, resilient systems 
-                    that grow with your needs.
+                    Enterprise-grade cost controls and
+                    real-time usage analytics.
                   </p>
                 </div>
 
@@ -98,9 +100,10 @@ export function AboutSection() {
                     Backend Systems
                   </h4>
                   <p className="text-gray-400 text-sm leading-relaxed font-mono max-w-md">
-                    → Developing robust ETL pipelines and backend 
-                    architectures using Python and Node.js. 
-                    Integrating AWS and GCP services seamlessly.
+                    → Engineering scalable ETL pipelines and backend
+                    architectures using Python and Node.js.
+                    Integrating AWS (S3, DynamoDB, Glue, Polly)
+                    and GCP services into automated CI/CD workflows.
                   </p>
                   <p className="text-gray-500 text-sm leading-relaxed font-mono max-w-md mt-4">
                     From concept to production.
@@ -113,12 +116,13 @@ export function AboutSection() {
                     Cloud Infrastructure
                   </h4>
                   <p className="text-gray-400 text-sm leading-relaxed font-mono max-w-md">
-                    → Containerization with Docker, orchestration 
-                    with Kubernetes. Infrastructure as Code with 
-                    Terraform and automated workflows.
+                    → Deploying multi-service AI infrastructure on GKE
+                    using Helm, Skaffold, and Terraform with automatic
+                    database migrations. Containerization with Docker
+                    and GitHub Actions CI/CD pipelines.
                   </p>
                   <p className="text-gray-500 text-sm leading-relaxed font-mono max-w-md mt-4">
-                    Delivering reliable infrastructure 
+                    Delivering reliable infrastructure
                     that scales effortlessly.
                   </p>
                 </div>

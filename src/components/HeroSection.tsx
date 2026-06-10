@@ -5,8 +5,8 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export function HeroSection() {
   const nameRef = useCipherAnimation('KRITENSH KUMAR', { delay: 500, duration: 800 });
-  const titleRef = useCipherAnimation('DevOps Engineer, Backend Developer & ML Engineer', { delay: 800, duration: 800 });
-  const specializationRef = useCipherAnimation('DEVOPS, CLOUD INFRASTRUCTURE & BACKEND SYSTEMS', { delay: 1100, duration: 800 });
+  const titleRef = useCipherAnimation('Software Developer Intern & Backend Engineer', { delay: 800, duration: 800 });
+  const specializationRef = useCipherAnimation('GENERATIVE AI, LLM SYSTEMS & BACKEND ENGINEERING', { delay: 1100, duration: 800 });
 
   return (
     <section className="min-h-screen flex items-center px-4 mobile:px-6 sm:px-8 bg-black relative overflow-hidden pt-20 mobile:pt-24 sm:pt-0">
@@ -38,9 +38,6 @@ export function HeroSection() {
                 <span className="text-white text-lg mobile:text-xl sm:text-2xl font-mono mr-3 sm:mr-4">+</span>
                 <div className="flex-1 h-px bg-white"></div>
               </div>
-              <h2 ref={titleRef} className="text-xs mobile:text-sm sm:text-xl md:text-2xl text-white font-mono tracking-wide mt-3 mobile:mt-2 sm:mt-4 uppercase">
-                DevOps Engineer, Backend Developer & ML Engineer
-              </h2>
             </div>
             <div className="border-l-2 border-gray-500 pl-4 mobile:pl-3 sm:pl-6 mt-6 mobile:mt-4 sm:mt-8">
               <p className="text-xs mobile:text-xs sm:text-sm text-gray-400 font-mono">
@@ -62,16 +59,17 @@ export function HeroSection() {
                   SPECIALIZATION
                 </h3>
                 <h4 ref={specializationRef} className="text-sm mobile:text-xs text-white tracking-widest font-mono mb-3 mobile:mb-2 uppercase">
-                  DEVOPS, CLOUD INFRASTRUCTURE & BACKEND SYSTEMS
+                  GENERATIVE AI, LLM SYSTEMS & BACKEND ENGINEERING
                 </h4>
               </div>
               
               <p className="text-xs mobile:text-xs text-gray-400 leading-relaxed mobile:leading-relaxed font-mono max-w-sm mobile:max-w-sm">
-                Architecting production-grade cloud-native 
-                infrastructure on GKE with Kubernetes, Terraform, 
-                Helm, and Skaffold. Building enterprise-scale 
-                backend systems and ETL pipelines using Python, 
-                Node.js, AWS, and Google Cloud Platform.
+                Building full-stack LLM gateway platforms with
+                Next.js, Hono, and HMAC-signed session URLs.
+                Deploying multi-service AI infrastructure on GKE
+                using Helm, Skaffold, and Terraform. Unifying
+                250+ AI provider integrations behind multi-tenant
+                RBAC workspaces with real-time usage analytics.
               </p>
               
               <div className="pt-4 mobile:pt-3">
@@ -79,7 +77,7 @@ export function HeroSection() {
                   CURRENT ROLE
                 </h5>
                 <p className="text-xs mobile:text-xs text-gray-400 font-mono">
-                  DevOps Intern at Wootzapp Pvt. Ltd. (Arakoo)
+                  Software Developer Intern at Wootzapp Pvt. Ltd. (Arakoo)
                 </p>
               </div>
             </div>

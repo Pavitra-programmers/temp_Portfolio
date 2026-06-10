@@ -6,15 +6,15 @@ import { useCipherAnimation } from '../hooks/useCipherAnimation';
 const experiences = [
   {
     company: 'WOOTZAPP PVT. LTD. (ARAKOO)',
-    role: 'DevOps Intern',
-    period: 'NOV 2025 - CURRENT',
-    description: 'Architected and deployed production-grade multi-service AI gateway infrastructure on Google Kubernetes Engine (GKE) utilizing Helm charts, Skaffold for rapid iteration, and Terraform for infrastructure as code. Engineered a comprehensive cost management platform for AI services, providing real-time usage tracking, billing analytics, and budget controls for LLM API consumption.',
+    role: 'Software Developer Intern',
+    period: 'NOV 2025 - MAY 2026',
+    description: 'Contributed across 5 production systems: StringCost: full-stack LLM billing gateway unifying 250+ AI providers with multi-tenant RBAC, MCP orchestration, and real-time cost analytics, deployed on GKE via Helm/Skaffold/Terraform (70% faster deploys). Autopilot: Next.js + Electron AI platform with Google Gemini RAG, voice activity detection, screen capture, and Stripe billing. OpenWork: open-source agentic desktop app (Tauri + React) for AI workflow management. OpenEral: Docker sandbox for AI coding agents with PostgreSQL persistence. Gateway: LLM routing gateway supporting 200+ models with retries, fallbacks, and load balancing.',
     website: 'app.stringcost.com'
   },
   {
     company: 'FORNAX EVERUSEFUL PVT. LTD.',
     role: 'Backend and DevOps Intern',
-    period: 'JUL 2025 - OCT 2025',
+    period: 'JUL 2025 - NOV 2025',
     description: 'Architected and implemented scalable backend systems and ETL pipelines using Python and Node.js. Orchestrated AWS cloud services (EC2, DynamoDB, S3) integration with automated CI/CD workflows via GitHub Actions, achieving 25% reduction in deployment cycles. Optimized cloud infrastructure through strategic resource allocation and autoscaling policies, resulting in 35% improvement in system scalability and cost efficiency.',
     website: 'amoghconnect.com'
   },
@@ -61,7 +61,7 @@ const technologies = [
   { category: 'LANGUAGES', items: ['Python', 'C/C++', 'JavaScript', 'SQL', 'HTML', 'CSS'] },
   { category: 'DATABASES', items: ['MySQL', 'PostgreSQL', 'DynamoDB', 'S3', 'MongoDB', 'Knex.js'] },
   { category: 'CLOUD & DEVOPS', items: ['AWS (EC2, S3, Glue)', 'Google Cloud (GKE)', 'Docker', 'Kubernetes', 'Terraform', 'Helm', 'Skaffold', 'GitHub Actions', 'CI/CD'] },
-  { category: 'FRAMEWORKS', items: ['Flask', 'Django', 'React.js', 'Node.js', 'Express.js', 'REST APIs', 'Microservices', 'JWT', 'Tailwind CSS'] },
+  { category: 'FRAMEWORKS', items: ['Flask', 'Django', 'Next.js', 'React.js', 'Node.js', 'Express.js', 'Hono', 'Firebase', 'Hugging Face', 'Tailwind CSS', 'N8N Automation', 'REST APIs', 'Microservices', 'JWT'] },
   { category: 'ML & AI', items: ['Machine Learning', 'Hugging Face', 'N8N Automation', 'NLP', 'Data Analysis'] }
 ];
 
@@ -76,17 +76,18 @@ export function ExperienceSection() {
   return (
     <>
       {/* Screenshot Image Section */}
-      <div className="relative h-96 bg-gradient-to-b from-transparent to-black/80 mb-8">
-        <div className="absolute inset-0 flex items-center justify-center">
+      <div className="relative bg-gradient-to-b from-transparent to-black/80">
+        <div className="flex items-center justify-center">
           <img 
             src="/assets/10.jpg"
             alt="Experience Screenshot"
-            className="h-80 w-full object-contain opacity-40 hover:opacity-70 transition-opacity duration-300"
+            className="h-96 w-full object-contain opacity-40 hover:opacity-70 transition-opacity duration-300"
+            style={{ filter: 'grayscale(90%) contrast(1.1)' }}
           />
         </div>
       </div>
 
-      <section id="experience" className="py-20 mt-20 px-8 bg-black relative">
+      <section id="experience" className="py-20 px-8 bg-black relative">
         {/* Background Image */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
@@ -94,6 +95,7 @@ export function ExperienceSection() {
             src="/assets/2.jpg"
             alt="Technology Background"
             className="w-full h-full object-cover"
+            style={{ filter: 'grayscale(100%)' }}
           />
         </div>
 
@@ -118,7 +120,7 @@ export function ExperienceSection() {
                 <div className="flex-1 h-px bg-white"></div>
               </div>
               <p className="text-sm text-white font-mono tracking-wide mt-3 uppercase">
-                DevOps, Cloud Infrastructure & Backend Development
+                Generative AI, Backend Systems & Cloud Infrastructure
               </p>
             </div>
           </div>
@@ -129,10 +131,11 @@ export function ExperienceSection() {
                 CURRENT FOCUS
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-mono mb-4">
-                Specialized in cloud-native DevOps engineering, 
-                Kubernetes orchestration, infrastructure as code 
-                (Terraform), and building production-grade scalable 
-                backend systems with automated CI/CD pipelines.
+                Specialized in Generative AI/ML development,
+                building full-stack LLM gateway platforms,
+                multi-tenant backend systems, and deploying
+                production-grade infrastructure on GKE with
+                Helm, Skaffold, and Terraform.
               </p>
               <p className="text-xs text-gray-400 leading-relaxed font-mono">
                 Pursuing B.Tech in Computer Science at 
